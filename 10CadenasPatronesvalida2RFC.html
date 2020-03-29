@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control submit por evento formulario</title>
+<link rel="stylesheet" href="CSS/EstilosFactorial.css">
+</head>
+<body>
+	<script type="text/javascript">
+		function valida(campo){
+			var bRet = false;
+			if (campo.value == "")
+				document.getElementById("ValidaRFC").innerHTML = "Faltan datos en el RFC";
+			else 	if (!campo.value.match(/^[A-Z]{3,4}\d{6}[A-Z0-9]{3}$/))
+					document.getElementById("ValidaRFC").innerHTML = "No tiene formato de RFC";
+				else{
+				    document.getElementById("ValidaRFC").innerHTML = "La cadena ingresada tiene formato de RFC";
+					bRet = true;
+					}
+			return bRet;
+		}
+	</script>
+	<header>
+		<div class="Contenedor">
+			<h1>Validar RFC</h1>
+		</div>
+	</header>
+	<div class="Principal">
+		<br>
+		<p class="dato">Ingrese la cadena correspondiente para verificar si cumple con el formato RFC</p><BR><br>
+    <form>
+		RFC <input type="text" name="txtRFC" maxlength="13" size="20"/>
+		<br/>
+		<BR>
+		<input type="submit" onClick="return valida(txtRFC);" value="Ok"/>
+	</form>
+	<h1>Respuesta:</h1><br>
+	<h2 id="ValidaRFC"></h2>
+	</div>
+	<footer>
+		<div class="ContenedorFooter">
+			<p class="end"><BR>Creador de la p&aacute;gina: Claudia Cruz Olmos<BR><BR></p>
+		</div>
+	</footer>
+	
+</body>
+</html>

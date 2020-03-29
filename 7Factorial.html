@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 7 - Factorial de un n&uacute;mero entero</title>
+<link rel="stylesheet" type="text/css" href="CSS/EstilosFactorial.css">
+</head>
+<body>
+  <header>
+    <div class="Contenedor">
+    <h1>Factorial</h1>
+  </div>
+  </header>
+
+  <div class="Principal">
+    <h1>N&uacute;mero ingresado: </h1>
+    <h2 id = "numero1"></h2>
+    <h1>El resultado de sacar el factorial de dicho n&uacute;mero es: </h1>
+    <h2 id = "result"></h2>
+  </div>
+</div>
+<footer>
+  <div class="ContenedorFooter">
+    <p class="end"><BR>Creador de la p&aacute;gina: Claudia Cruz Olmos<BR><BR></p>
+  </div>
+</footer>
+</body>
+
+<script type="text/javascript">
+var numero = prompt("Introduce un n\u00famero y se mostrar\u00e1 su factorial");
+var resultado = 1;
+
+for(var i=1; i<=numero; i++) {
+  resultado *= i;
+}
+document.getElementById("numero1").innerHTML = numero;
+document.getElementById("result").innerHTML = resultado;
+</script>
+
+</html>
